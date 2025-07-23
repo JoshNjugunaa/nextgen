@@ -26,9 +26,16 @@ export default function Checkout() {
 
   useEffect(() => {
     // Load cart from localStorage
-    const savedCart = localStorage.getItem('foodCourtCart');
-    if (savedCart) {
-      setCart(JSON.parse(savedCart));
+    if (typeof window !== 'undefined') {
+      const savedCart = localStorage.getItem('foodCourtCart');
+      if (savedCart) {
+        try {
+          setCart(JSON.parse(savedCart));
+        } catch (error) {
+          console.error('Error parsing cart data:', error);
+          localStorage.removeItem('foodCourtCart');
+        }
+      }
     }
   }, []);
 
@@ -36,7 +43,9 @@ export default function Checkout() {
     if (quantity === 0) {
       const newCart = cart.filter(item => item.dishId !== dishId);
       setCart(newCart);
-      localStorage.setItem('foodCourtCart', JSON.stringify(newCart));
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('foodCourtCart', JSON.stringify(newCart));
+      }
     } else {
       const newCart = cart.map(item =>
         item.dishId === dishId 
@@ -44,7 +53,9 @@ export default function Checkout() {
           : item
       );
       setCart(newCart);
-      localStorage.setItem('foodCourtCart', JSON.stringify(newCart));
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('foodCourtCart', JSON.stringify(newCart));
+      }
     }
   };
 
@@ -55,13 +66,17 @@ export default function Checkout() {
         : item
     );
     setCart(newCart);
-    localStorage.setItem('foodCourtCart', JSON.stringify(newCart));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('foodCourtCart', JSON.stringify(newCart));
+    }
   };
 
   const removeItem = (dishId: string) => {
     const newCart = cart.filter(item => item.dishId !== dishId);
     setCart(newCart);
-    localStorage.setItem('foodCourtCart', JSON.stringify(newCart));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('foodCourtCart', JSON.stringify(newCart));
+    }
   };
 
   const getTotalPrice = () => {
@@ -94,7 +109,9 @@ export default function Checkout() {
     
     // Clear cart
     setCart([]);
-    localStorage.removeItem('foodCourtCart');
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('foodCourtCart');
+    }
     
     // Redirect to home
     router.push('/');

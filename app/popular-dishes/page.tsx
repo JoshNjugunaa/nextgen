@@ -1,3 +1,5 @@
+'use client';
+
 import { popularDishes } from '@/lib/data';
 
 export default function PopularDishes() {

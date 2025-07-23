@@ -35,12 +35,16 @@ export default function Signup() {
 
     if (formData.userType === 'owner') {
       // Redirect to owner dashboard
-      localStorage.setItem('userType', 'owner');
-      localStorage.setItem('userName', `${formData.firstName} ${formData.lastName}`);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('userType', 'owner');
+        localStorage.setItem('userName', `${formData.firstName} ${formData.lastName}`);
+      }
       window.location.href = '/owner-dashboard';
     } else {
-      localStorage.setItem('userType', 'customer');
-      localStorage.setItem('userName', `${formData.firstName} ${formData.lastName}`);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('userType', 'customer');
+        localStorage.setItem('userName', `${formData.firstName} ${formData.lastName}`);
+      }
       alert(`User account created for: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\n\nNote: This is a demo - no actual account is created.`);
     }
   };

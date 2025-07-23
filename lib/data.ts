@@ -98,45 +98,45 @@ export const restaurants: Restaurant[] = [
     description: 'Traditional coastal dishes with a homely touch',
     image: 'https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=400',
     dishes: [
-      { id: '19', name: 'Pilau Rice', price: 800, description: 'Spiced rice with meat', restaurantId: '7', isPopular: true },
-      { id: '20', name: 'Samosas', price: 150, description: 'Crispy pastries with filling', restaurantId: '7' },
-      { id: '21', name: 'Chapati', price: 50, description: 'Soft flatbread', restaurantId: '7' },
+      { id: '19', name: 'Pilau Rice', price: 800, description: 'Spiced rice with meat', restaurantId: '5', isPopular: true },
+      { id: '20', name: 'Samosas', price: 150, description: 'Crispy pastries with filling', restaurantId: '5' },
+      { id: '21', name: 'Chapati', price: 50, description: 'Soft flatbread', restaurantId: '5' },
     ]
   },
   {
-    id: '8',
+    id: '6',
     name: 'Delhi Delights',
     cuisine: 'Indian',
     description: 'North Indian specialties and street food',
     image: 'https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400',
     dishes: [
-      { id: '22', name: 'Chicken Tikka', price: 1400, description: 'Grilled marinated chicken', restaurantId: '8', isPopular: true },
-      { id: '23', name: 'Paneer Curry', price: 1100, description: 'Cottage cheese in spicy gravy', restaurantId: '8' },
-      { id: '24', name: 'Garlic Naan', price: 350, description: 'Garlic flavored bread', restaurantId: '8' },
+      { id: '22', name: 'Chicken Tikka', price: 1400, description: 'Grilled marinated chicken', restaurantId: '6', isPopular: true },
+      { id: '23', name: 'Paneer Curry', price: 1100, description: 'Cottage cheese in spicy gravy', restaurantId: '6' },
+      { id: '24', name: 'Garlic Naan', price: 350, description: 'Garlic flavored bread', restaurantId: '6' },
     ]
   },
   {
-    id: '9',
+    id: '7',
     name: 'Spice Garden',
     cuisine: 'Indian',
     description: 'Authentic Indian curries and breads',
     image: 'https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400',
     dishes: [
-      { id: '13', name: 'Butter Chicken', price: 1300, description: 'Creamy tomato chicken curry', restaurantId: '5', isPopular: true },
-      { id: '14', name: 'Naan Bread', price: 300, description: 'Fresh baked Indian bread', restaurantId: '5' },
-      { id: '15', name: 'Dal Curry', price: 700, description: 'Lentil curry with spices', restaurantId: '5' },
+      { id: '13', name: 'Butter Chicken', price: 1300, description: 'Creamy tomato chicken curry', restaurantId: '7', isPopular: true },
+      { id: '14', name: 'Naan Bread', price: 300, description: 'Fresh baked Indian bread', restaurantId: '7' },
+      { id: '15', name: 'Dal Curry', price: 700, description: 'Lentil curry with spices', restaurantId: '7' },
     ]
   },
   {
-    id: '6',
+    id: '8',
     name: 'Green Bowl',
     cuisine: 'Vegan',
     description: 'Healthy plant-based meals and smoothies',
     image: 'https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg?auto=compress&cs=tinysrgb&w=400',
     dishes: [
-      { id: '16', name: 'Buddha Bowl', price: 900, description: 'Mixed vegetables and quinoa', restaurantId: '6', isPopular: true },
-      { id: '17', name: 'Green Smoothie', price: 500, description: 'Spinach, banana, and mango', restaurantId: '6' },
-      { id: '18', name: 'Veggie Wrap', price: 700, description: 'Fresh vegetables in a tortilla', restaurantId: '6' },
+      { id: '16', name: 'Buddha Bowl', price: 900, description: 'Mixed vegetables and quinoa', restaurantId: '8', isPopular: true },
+      { id: '17', name: 'Green Smoothie', price: 500, description: 'Spinach, banana, and mango', restaurantId: '8' },
+      { id: '18', name: 'Veggie Wrap', price: 700, description: 'Fresh vegetables in a tortilla', restaurantId: '8' },
     ]
   },
 ];

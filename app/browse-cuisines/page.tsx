@@ -57,7 +57,9 @@ export default function BrowseCuisines() {
     
     setCart(newCart);
     // Save to localStorage
-    localStorage.setItem('foodCourtCart', JSON.stringify(newCart));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('foodCourtCart', JSON.stringify(newCart));
+    }
   };
 
   const updateCartQuantity = (dishId: string, quantity: number) => {
@@ -73,7 +75,9 @@ export default function BrowseCuisines() {
     }
     
     setCart(newCart);
-    localStorage.setItem('foodCourtCart', JSON.stringify(newCart));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('foodCourtCart', JSON.stringify(newCart));
+    }
   };
 
   const getTotalPrice = () => {
@@ -91,9 +95,16 @@ export default function BrowseCuisines() {
 
   // Load cart from localStorage on component mount
   useEffect(() => {
-    const savedCart = localStorage.getItem('foodCourtCart');
-    if (savedCart) {
-      setCart(JSON.parse(savedCart));
+    if (typeof window !== 'undefined') {
+      const savedCart = localStorage.getItem('foodCourtCart');
+      if (savedCart) {
+        try {
+          setCart(JSON.parse(savedCart));
+        } catch (error) {
+          console.error('Error parsing cart data:', error);
+          localStorage.removeItem('foodCourtCart');
+        }
+      }
     }
   }, []);
 

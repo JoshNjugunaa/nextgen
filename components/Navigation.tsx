@@ -22,8 +22,10 @@ export default function Navigation() {
 
   useEffect(() => {
     // Check if user is logged in as owner (only runs on client-side)
-    const userType = localStorage.getItem('userType');
-    setIsOwnerLoggedIn(userType === 'owner');
+    if (typeof window !== 'undefined') {
+      const userType = localStorage.getItem('userType');
+      setIsOwnerLoggedIn(userType === 'owner');
+    }
   }, []);
 
   return (
