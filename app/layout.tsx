@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-gradient-to-br from-blue-50 via-white to-green-50 min-h-screen`}>
         <div suppressHydrationWarning>
           <Navigation />
-          <main className="max-w-6xl mx-auto px-4 py-8">
+          <main className="w-full px-4 py-8">
             {children}
           </main>
         </div>

@@ -34,7 +34,7 @@ export default function Login() {
   };
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="max-w-md mx-auto max-w-7xl">
       <div className="bg-white rounded-lg shadow-md p-8">
         <div className="text-center mb-8">
           <h1 className="text-2xl font-bold text-gray-800 mb-2">Welcome Back</h1>

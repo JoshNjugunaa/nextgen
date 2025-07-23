@@ -16,7 +16,7 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       {/* Hero Section with Background */}
       <div className="relative h-96 mb-16 rounded-lg overflow-hidden">
         <Image

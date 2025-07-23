@@ -50,7 +50,7 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex max-w-full">
       {/* Left side - Image */}
       <div className="hidden lg:flex lg:w-1/2 relative">
         <Image
